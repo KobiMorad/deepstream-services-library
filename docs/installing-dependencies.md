@@ -3,7 +3,14 @@ The DeepStream Services Library (DSL) is built on the NVIDIA® [DeepStream SDK](
 
 Please consult the [NVIDIA DeepStream Quick Start Guide](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html) for complete Installation Instructions.
 
-> The following installation instructions are specific to NVIDIA® DeepStream Versions 6.4 and 7.0 on Ubuntu 22.04.
+> The following installation instructions are specific to NVIDIA® DeepStream Versions 6.4, 7.0, 7.1, and 8.0 on Ubuntu 22.04 and 24.04 LTS.
+>
+> **DeepStream SDK 8.0 Notes:**
+> - Supports Ubuntu 24.04 LTS and NVIDIA Blackwell GPU architecture
+> - For Jetson platforms, requires JetPack 7.0
+> - OpenCV is deprecated by default (can be enabled with `WITH_OPENCV=1` in DS plugin Makefiles)
+> - Removed support for TensorFlow, UFF, and Caffe models (use TensorRT engine files or ONNX)
+> - DeepStream 7.1 applications are fully compatible with DeepStream 8.0
 
 ## Contents
 * [Base Install - Jetson and dGPU](#base-install---jetson-and-dgpu)

@@ -39,7 +39,7 @@ else
 endif
 
 CXX_VERSION:=c++17
-DSL_VERSION:='L"v0.31.b.alpha"'
+DSL_VERSION:='L"v0.32.alpha"'
 
 GLIB_VERSION:=2.0
 GSTREAMER_VERSION:=1.0
@@ -49,9 +49,13 @@ GSTREAMER_WEBRTC_VERSION:=1.0
 LIBSOUP_VERSION:=2.4
 JSON_GLIB_VERSION:=1.0
 
-# To enable the extended Image Services, ensure FFmpeg or OpenCV 
+# To enable the extended Image Services, ensure FFmpeg or OpenCV
 # is installed (See /docs/installing-dependencies.md), and
 #  - set either BUILD_WITH_FFMPEG or BUILD_WITH_OPENCV:=true (NOT both)
+#
+# IMPORTANT: DeepStream SDK 8.0 deprecated OpenCV by default. To use OpenCV
+# with DS 8.0, you must rebuild DS plugins (nvinfer, dsexample) with WITH_OPENCV=1
+# See: https://docs.nvidia.com/metropolis/deepstream/8.0/text/DS_Release_notes.html
 BUILD_WITH_FFMPEG:=false
 BUILD_WITH_OPENCV:=false
 

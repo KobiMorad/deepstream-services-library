@@ -36,6 +36,21 @@ The DeepStream SDK and DSL use the open source [GStreamer](https://gstreamer.fre
 ---
 
 # Important Bulletins
+
+## DeepStream SDK 8.0 Support (New!)
+DSL now supports DeepStream SDK 8.0 with full backward compatibility. Key highlights:
+- **Ubuntu 24.04 LTS** support
+- **NVIDIA Blackwell** GPU architecture support
+- **Jetson Thor** platform support (requires JetPack 7.0)
+- **OpenCV Deprecation**: DS 8.0 deprecated OpenCV by default. See [Installing Dependencies](/docs/installing-dependencies.md#enabling-extended-image-services-optional) for OpenCV usage.
+- **Removed Model Formats**: TensorFlow, UFF, and Caffe models no longer supported. Use TensorRT engine or ONNX formats.
+- **Full Compatibility**: DeepStream 7.1 applications work without modification on DS 8.0
+
+See [v0.32.alpha Release Notes](/Release%20Notes/v0.32.alpha.md) for complete details.
+
+---
+
+## DeepStream 7.0 Installation Warning
 **WARNING!** There is a cricical error in the DeepStream 7.0 Installation Instructions.
 
 Under the section [Install librdkafka](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Installation.html#install-librdkafka-to-enable-kafka-protocol-adaptor-for-message-broker), the following instructions
