@@ -1791,6 +1791,10 @@ namespace DSL
         case DSL_ENCODER_SW_H264 :
             m_pEncoder = DSL_ELEMENT_NEW("x264enc", name);
             m_pParser = DSL_ELEMENT_NEW("h264parse", name);
+            m_pEncoder->SetAttribute("tune", 0x00000004);   // zerolatency
+            m_pEncoder->SetAttribute("speed-preset", 1);    // ultrafast
+            m_pEncoder->SetAttribute("bframes", 0);         // disable B-frames
+            m_pEncoder->SetAttribute("key-int-max", 15);    // short GOP
             break;
         case DSL_ENCODER_SW_H265 :
             m_pEncoder = DSL_ELEMENT_NEW("x265enc", name);
